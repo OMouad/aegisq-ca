@@ -1,0 +1,19 @@
+# Standard
+/build/
+/out/
+/target/
+/node_modules/
+/.idea/
+/.vscode/
+
+# Security: Prevent secrets/certs/keys from ever entering git
+*.pem
+*.key
+*.crt
+*.p12
+*.jks
+*.keystore
+*.env
+infra/dev-certs/
+infra/dev-secrets/
+ 
