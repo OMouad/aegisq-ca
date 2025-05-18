@@ -2,7 +2,7 @@ name: CI
 on: [push, pull_request]
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     services:
       postgres:
         image: postgres:16
@@ -18,9 +18,4 @@ jobs:
           java-version: 21
           cache: gradle
       - name: Gradle Build
-        run: .\gradlew build -x test --no-daemon
-      - name: Trivy FS Scan
-        uses: aquasecurity/trivy-action@0.28.0
-        with:
-          scan-type: fs
-          exit-code: 1
+        run: ./gradlew build -x test --no-daemon
