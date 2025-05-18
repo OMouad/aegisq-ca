@@ -20,7 +20,7 @@ jobs:
       - name: Gradle Build
         run: .\gradlew build -x test --no-daemon
       - name: Trivy FS Scan
-        uses: aquasecurity/trivy-action@v0.16.0
+        uses: aquasecurity/trivy-action@v0             
         with:
           scan-type: fs
           exit-code: 1
